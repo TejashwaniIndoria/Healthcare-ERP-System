@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Healthcare ERP</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ================= LOGIN ================= -->
+
+    <div id="loginSection">
+
+        <h1>🏥 Healthcare ERP System</h1>
+
+        <h2>Login</h2>
+
+        <div class="form-box">
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Username">
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Password">
+
+            <button onclick="login()">
+                Login
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= ERP ================= -->
+
+    <div id="erpSection" style="display:none;">
+
+        <h1>🏥 Healthcare ERP System</h1>
+
+        <h3>
+
+            Logged in as :
+            <span id="userRole"></span>
+
+            <button onclick="logout()">
+                Logout
+            </button>
+
+        </h3>
+
+
+        <!-- ================= DASHBOARD ================= -->
+
+        <div id="dashboardSection">
+
+            <h2>📊 Dashboard</h2>
+
+            <div class="dashboard">
+
+                <div class="card">
+
+                    <h3>Total Patients</h3>
+
+                    <p id="totalPatients">0</p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Total Doctors</h3>
+
+                    <p id="totalDoctors">0</p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Today's Appointments</h3>
+
+                    <p id="todayAppointments">0</p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Common Disease</h3>
+
+                    <p id="commonDisease">None</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <!-- ================= PATIENT ================= -->
+
+        <div id="patientSection">
+
+            <h2>👤 Patient Management</h2>
+
+            <div class="form-box">
+
+                <input
+                    id="name"
+                    placeholder="Patient Name">
+
+                <input
+                    id="age"
+                    type="number"
+                    placeholder="Age">
+
+                <select id="gender">
+
+                    <option>Male</option>
+
+                    <option>Female</option>
+
+                </select>
+
+                <input
+                    id="phone"
+                    placeholder="Phone Number">
+
+                <input
+                    id="disease"
+                    placeholder="Disease">
+
+                <button onclick="addPatient()">
+
+                    Add Patient
+
+                </button>
+
+            </div>
+
+            <br>
+
+            <input
+                id="patientSearch"
+                placeholder="Search Patient">
+
+            <button onclick="searchPatients()">
+
+                Search
+
+            </button>
+
+            <button onclick="loadPatients()">
+
+                Show All
+
+            </button>
+
+            <h3>Patient Records</h3>
+
+            <table id="patientTable">
+
+                <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Name</th>
+
+                    <th>Age</th>
+
+                    <th>Gender</th>
+
+                    <th>Phone</th>
+
+                    <th>Disease</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+                </thead>
+
+                <tbody>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <hr>
+                <!-- ================= DOCTOR ================= -->
+
+        <div id="doctorSection">
+
+            <h2>👨‍⚕️ Doctor Management</h2>
+
+            <div class="form-box">
+
+                <input
+                    id="doctorName"
+                    placeholder="Doctor Name">
+
+                <input
+                    id="specialization"
+                    placeholder="Specialization">
+
+                <input
+                    id="doctorPhone"
+                    placeholder="Phone Number">
+
+                <input
+                    id="experience"
+                    type="number"
+                    placeholder="Experience">
+
+                <button onclick="addDoctor()">
+                    Add Doctor
+                </button>
+
+            </div>
+
+            <br>
+
+            <input
+                id="doctorSearch"
+                placeholder="Search Doctor">
+
+            <button onclick="searchDoctors()">
+                Search
+            </button>
+
+            <button onclick="loadDoctors()">
+                Show All
+            </button>
+
+            <h3>Doctor Records</h3>
+
+            <table id="doctorTable">
+
+                <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Specialization</th>
+                    <th>Phone</th>
+                    <th>Experience</th>
+                    <th>Action</th>
+
+                </tr>
+
+                </thead>
+
+                <tbody>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <hr>
+
+
+        <!-- ================= APPOINTMENT ================= -->
+
+        <div id="appointmentSection">
+
+            <h2>📅 Appointment Management</h2>
+
+            <div class="form-box">
+
+                <select id="appointmentPatient">
+
+                    <option value="">
+                        Select Patient
+                    </option>
+
+                </select>
+
+                <select id="appointmentDoctor">
+
+                    <option value="">
+                        Select Doctor
+                    </option>
+
+                </select>
+
+                <input
+                    type="date"
+                    id="appointmentDate">
+
+                <input
+                    type="time"
+                    id="appointmentTime">
+
+                <select id="appointmentStatus">
+
+                    <option>
+                        Scheduled
+                    </option>
+
+                    <option>
+                        Completed
+                    </option>
+
+                    <option>
+                        Cancelled
+                    </option>
+
+                </select>
+
+                <button onclick="addAppointment()">
+                    Book Appointment
+                </button>
+
+            </div>
+
+            <h3>Appointment Records</h3>
+
+            <table id="appointmentTable">
+
+                <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Patient</th>
+                    <th>Doctor</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Status</th>
+
+                </tr>
+
+                </thead>
+
+                <tbody>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
