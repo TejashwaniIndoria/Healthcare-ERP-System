@@ -1,81 +1,83 @@
-# 🏥 Healthcare ERP System
+# Healthcare ERP System
 
-A **full-stack Healthcare ERP System** built using **Flask, SQLite, HTML, CSS, and JavaScript**.
+A full-stack Healthcare ERP System built using Flask, SQLite, HTML, CSS, and JavaScript.
 
-The application provides **role-based authentication** and helps manage patients, doctors, appointments, and healthcare operations through an interactive dashboard.
-
----
-
-# 🚀 Features
-
-## 🔐 Authentication & Authorization
-- Secure user login system
-- Role-based access control
-- Multiple user roles:
-  - Admin
-  - Doctor
-  - Receptionist
+The application provides role-based authentication and supports the management of patients, doctors, appointments, and healthcare operations through an interactive dashboard.
 
 ---
 
-## 👨‍⚕️ Patient Management
-- Add new patients
-- View patient records
-- Update patient information
-- Delete patient records
-- Search patients
+## Features
+
+### Authentication and Authorization
+
+* Secure user login system
+* Role-based access control
+* Multiple user roles:
+
+  * Admin
+  * Doctor
+  * Receptionist
+
+### Patient Management
+
+* Add new patients
+* View patient records
+* Update patient information
+* Delete patient records
+* Search patients
+
+### Doctor Management
+
+* Add doctors
+* View doctor details
+* Update doctor information
+* Search doctors
+
+### Appointment Management
+
+* Schedule appointments
+* View appointment details
+* Manage healthcare appointments
+
+### Dashboard Analytics
+
+* Total patient count
+* Total doctor count
+* Today's appointments
+* Healthcare statistics
 
 ---
 
-## 🩺 Doctor Management
-- Add doctors
-- View doctor details
-- Update doctor information
-- Search doctors
+## Technology Stack
+
+### Frontend
+
+* HTML5
+* CSS3
+* JavaScript
+
+### Backend
+
+* Python
+* Flask
+* REST APIs
+
+### Database
+
+* SQLite
+
+### Development Tools
+
+* Git
+* GitHub
+* Visual Studio Code
 
 ---
 
-## 📅 Appointment Management
-- Schedule appointments
-- View appointment details
-- Manage healthcare appointments
-
----
-
-## 📊 Dashboard Analytics
-- Total patients count
-- Total doctors count
-- Today's appointments
-- Healthcare statistics
-
----
-
-# 🛠️ Tech Stack
-
-## Frontend
-- HTML5
-- CSS3
-- JavaScript
-
-## Backend
-- Python
-- Flask
-- REST APIs
-
-## Database
-- SQLite
-
-## Tools
-- Git & GitHub
-- VS Code
-
----
-
-# 📂 Project Structure
+## Project Structure
 
 ```text
 Healthcare-ERP-System/
-
 │
 ├── backend/
 │   ├── app.py
@@ -91,6 +93,13 @@ Healthcare-ERP-System/
 │   └── js/
 │
 ├── screenshots/
+│   ├── appointment.png
+│   ├── appointmentmanager.png
+│   ├── doctor.png
+│   ├── doctormanagement.png
+│   ├── paintientrecord.png
+│   ├── patientmanagement.png
+│   └── userpassword.png
 │
 ├── README.md
 └── .gitignore
@@ -98,96 +107,105 @@ Healthcare-ERP-System/
 
 ---
 
-# 📸 Screenshots
+## Screenshots
 
-## 🔑 Login Page
-![Login](screenshots/login.png)
+### Login and Authentication
 
----
-
-## 📊 Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Login and Authentication](screenshots/userpassword.png)
 
 ---
 
-## 👨‍⚕️ Patient Management
-![Patients](screenshots/patient-management.png)
+### Dashboard
+
+![Dashboard](screenshots/appointment.png)
 
 ---
 
-## 🩺 Doctor Management
-![Doctors](screenshots/doctor-management.png)
+### Patient Management
+
+![Patient Management](screenshots/patientmanagement.png)
 
 ---
 
-## 📅 Appointment Management
-![Appointments](screenshots/appointment-management.png)
+### Patient Records
+
+![Patient Records](screenshots/paintientrecord.png)
 
 ---
 
-# 🔄 System Workflow
+### Doctor Management
 
-1. User logs into the system.
-2. Authentication verifies user credentials.
-3. Access is provided based on user role.
-4. Users can manage patients, doctors, and appointments.
-5. Data is stored and retrieved using SQLite through Flask REST APIs.
+![Doctor Management](screenshots/doctormanagement.png)
 
 ---
 
-# ⚙️ Installation & Setup
+### Appointment Management
 
-## 1. Clone Repository
+![Appointment Management](screenshots/appointmentmanager.png)
+
+---
+
+## System Workflow
+
+1. The user logs into the system.
+2. Authentication verifies the user's credentials.
+3. Access is provided based on the user's role.
+4. Authorized users can manage patients, doctors, and appointments.
+5. Application data is stored and retrieved using SQLite through the Flask backend.
+6. The frontend communicates with the backend services to perform healthcare management operations.
+
+---
+
+## Installation and Setup
+
+### Prerequisites
+
+* Python 3.x
+* Git
+* A modern web browser
+
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/TejashwaniIndoria/Healthcare-ERP-System.git
+cd Healthcare-ERP-System
 ```
 
----
-
-## 2. Navigate to Backend
+### 2. Navigate to the Backend
 
 ```bash
-cd Healthcare-ERP-System/backend
+cd backend
 ```
 
----
-
-## 3. Create Virtual Environment
+### 3. Create a Virtual Environment
 
 ```bash
 python -m venv venv
 ```
 
----
+### 4. Activate the Virtual Environment
 
-## 4. Activate Virtual Environment
-
-### Windows
+#### Windows
 
 ```bash
 venv\Scripts\activate
 ```
 
----
-
-## 5. Install Dependencies
+### 5. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
-
-## 6. Run Flask Backend
+### 6. Run the Flask Backend
 
 ```bash
 python app.py
 ```
 
----
+The Flask application will start on the local address configured by the application.
 
-## 7. Run Frontend
+### 7. Open the Frontend
 
 Open:
 
@@ -195,34 +213,49 @@ Open:
 frontend/index.html
 ```
 
-in your browser.
+in a web browser.
 
 ---
 
-# 🔮 Future Enhancements
+## Security
 
-- Appointment edit and cancellation
-- Advanced reporting and analytics
-- Email/SMS notifications
-- Cloud database deployment
-- Improved dashboard visualizations
+The project uses role-based authentication to control access to healthcare management functionality.
+
+Sensitive configuration files, local databases, virtual environments, and other development-specific files should not be committed to the repository.
 
 ---
 
-# 🎯 Learning Outcomes
+## Future Enhancements
 
-- Developed a complete full-stack web application
-- Built REST APIs using Flask
-- Implemented CRUD operations
-- Integrated frontend with backend services
-- Designed role-based authentication
-- Worked with SQLite database management
+* Appointment editing and cancellation
+* Advanced reporting and analytics
+* Email and SMS notifications
+* Cloud database deployment
+* Improved dashboard visualizations
+* Enhanced user and role management
+* Production-ready deployment
 
 ---
 
-# 👩‍💻 Author
+## Learning Outcomes
+
+This project demonstrates practical experience in:
+
+* Full-stack web application development
+* REST API development using Flask
+* CRUD operations
+* Frontend and backend integration
+* Role-based authentication
+* SQLite database management
+* Healthcare data management
+* Git and GitHub version control
+
+---
+
+## Author
 
 **Tejashwani Indoria**
 
-GitHub:
-https://github.com/TejashwaniIndoria
+Information Science and Engineering Student
+
+GitHub: https://github.com/TejashwaniIndoria
