@@ -115,12 +115,6 @@ Healthcare-ERP-System/
 
 ---
 
-### Dashboard
-
-![Dashboard](screenshots/appointment.png)
-
----
-
 ### Patient Management
 
 ![Patient Management](screenshots/patientmanagement.png)
